@@ -10,13 +10,11 @@ export class Cast extends Component{
         <Text style={styles.title}>Top Billed Cast</Text>
 
         <ScrollView horizontal={true}>
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
-          <Image source={require('../../../images/star.png')} />
+          <Image style={styles.image} source={require('../../../images/cast1.jpg')} />
+          <Image style={styles.image} source={require('../../../images/cast2.jpg')} />
+          <Image style={styles.image} source={require('../../../images/cast3.jpg')} />
+          <Image style={styles.image} source={require('../../../images/cast4.jpg')} />
+          <Image style={styles.image} source={require('../../../images/cast5.jpg')} />
         </ScrollView> 
       </View>
     );

@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
     padding: 15
   },
+  image: {
+    marginRight: 5
+  },
 });
 
 export default styles;
