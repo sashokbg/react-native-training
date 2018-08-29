@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'white',
     fontSize: 28
-  }
+  },
   zone: {
     backgroundColor: '#212121',
     marginTop: 20,

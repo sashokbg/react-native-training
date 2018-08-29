@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, ScrollView} from 'react-native';
 import Zone from './Zone';
 import Header from './Header';
 import Movie from '../movie/Movie';
@@ -10,7 +10,7 @@ class MovieTemplate extends Component{
  
   render(){
     return (
-      <View style={styles.movieTemplate}>
+      <ScrollView style={styles.movieTemplate}>
         <Zone>
           <Header />
         </Zone>
@@ -20,7 +20,7 @@ class MovieTemplate extends Component{
         <Zone style={styles.zone}>
           <Cast></Cast>
         </Zone>
-      </View>
+      </ScrollView>
     )
   } 
 
