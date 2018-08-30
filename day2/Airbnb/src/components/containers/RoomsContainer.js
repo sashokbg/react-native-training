@@ -21,13 +21,16 @@ class RoomsContainer extends Component{
     }
   };
 
+ _idKeyExtractor = (item, index) => item._id;
+
   render(){
     return(
       <View>
-        <Text>ROOMS</Text>
         <FlatList 
+          style={styles.rooms}
+          keyExtractor = {this._idKeyExtractor}
           data={this.state.rooms}
-          renderItem={({item}) => <Room name={item.title} />}
+          renderItem={({item}) => <Room name={item.title} image={item.photos[0]} userImage={item.user.account.photos[0]} reviews={item.reviews} rating={item.ratingValue} />}
         />
       </View>
     );
@@ -36,7 +39,6 @@ class RoomsContainer extends Component{
   componentDidMount = () =>{
     axios.get('https://airbnb-api.now.sh/api/room?city=paris')
       .then((response) => {
-        alert(`Rooms: ${JSON.stringify(response)}`);
         this.setState({rooms: response.data.rooms })
       })
       .catch(function (error) {
