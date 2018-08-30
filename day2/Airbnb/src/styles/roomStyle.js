@@ -38,6 +38,15 @@ export default StyleSheet.create({
   },
   emptyStar:{
   },
+  price:{
+    fontSize: 20,
+    padding: 10,
+    width: 80,
+    position: 'absolute',
+    top: 170,
+    backgroundColor: 'black',
+    color: 'white'
+  },
   userImage:{
     width: 80,
     height: 80,

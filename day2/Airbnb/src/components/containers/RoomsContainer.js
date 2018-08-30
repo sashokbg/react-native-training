@@ -30,7 +30,7 @@ class RoomsContainer extends Component{
           style={styles.rooms}
           keyExtractor = {this._idKeyExtractor}
           data={this.state.rooms}
-          renderItem={({item}) => <Room name={item.title} image={item.photos[0]} userImage={item.user.account.photos[0]} reviews={item.reviews} rating={item.ratingValue} />}
+          renderItem={({item}) => <Room name={item.title} image={item.photos[0]} userImage={item.user.account.photos[0]} reviews={item.reviews} rating={item.ratingValue} price={item.price} />}
         />
       </View>
     );
