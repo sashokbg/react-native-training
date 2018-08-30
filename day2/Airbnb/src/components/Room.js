@@ -20,7 +20,7 @@ class Room extends Component{
     return (
       <View style={styles.room}>
         <Image style={styles.image} source={{uri: this.props.image}} />
-        <Text style={styles.price}>{this.props.price}</Text>
+        <Text style={styles.price}>{this.props.price} €</Text>
         <View style={styles.description}>
           <View style={styles.rating}> 
             <Text style={styles.name} numberOfLines={1}>{this.props.name}</Text>

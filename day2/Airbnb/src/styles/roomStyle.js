@@ -39,9 +39,11 @@ export default StyleSheet.create({
   emptyStar:{
   },
   price:{
-    fontSize: 20,
+    textAlign: 'center',
+    fontSize: 25,
     padding: 10,
-    width: 80,
+    minWidth: 80,
+    opacity: 0.7,
     position: 'absolute',
     top: 170,
     backgroundColor: 'black',
