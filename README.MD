@@ -60,3 +60,10 @@ Kill an existing bundler that is not working:
 lsof -i:8081
 ```
 
+# Perofmance
+
+Each parent component will call render() on its children
+
+To avoid reloading every component each time a state changes we need to implement shouldComponentUpdate or use PureCOmponent
+
+

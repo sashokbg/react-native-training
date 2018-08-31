@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {ActivityIndicator, View, Text, FlatList} from 'react-native';
 import styles from '../../styles/roomsStyles.js';
 import Room from '../Room.js';
 import axios from 'react-native-axios';
@@ -8,7 +8,8 @@ import axios from 'react-native-axios';
 class RoomsContainer extends Component{
 
   state = {
-    rooms: []
+    rooms: [],
+    isLoading: true
   }
 
   static navigationOptions = {
@@ -24,6 +25,15 @@ class RoomsContainer extends Component{
  _idKeyExtractor = (item, index) => item._id;
 
   render(){
+
+    if(this.state.isLoading){
+      return (
+        <View style={styles.loading}>
+           <ActivityIndicator />
+        </View>
+      )
+    }
+
     return(
       <View>
         <FlatList 
@@ -39,7 +49,10 @@ class RoomsContainer extends Component{
   componentDidMount = () =>{
     axios.get('https://airbnb-api.now.sh/api/room?city=paris')
       .then((response) => {
-        this.setState({rooms: response.data.rooms })
+        this.setState({
+          rooms: response.data.rooms,
+          isLoading: false
+        })
       })
       .catch(function (error) {
         alert(`ERROR ! ${error}`);

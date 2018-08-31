@@ -8,10 +8,10 @@ class Room extends Component{
     let filledStars = [];
     let emptyStars = [];
     for(i=0; i< this.props.rating; i++){
-      filledStars.push(<Text style={styles.filledStar}>★</Text>);
+      filledStars.push(<Text key={i} style={styles.filledStar}>★</Text>);
     }
     for(i=this.props.rating; i<5; i++){
-      emptyStars.push(<Text styles={styles.emptyStar}>☆</Text>);
+      emptyStars.push(<Text key={i} styles={styles.emptyStar}>☆</Text>);
     }
     return filledStars.concat(emptyStars);
   }
