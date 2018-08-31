@@ -4,11 +4,11 @@ import LoginContainer from './containers/LoginContainer.js';
 import RoomsContainer from './containers/RoomsContainer.js';
 
 export default createStackNavigator({
-  Rooms: {
-    screen: RoomsContainer
-  },
   Login: {
     screen: LoginContainer
+  },
+  Rooms: {
+    screen: RoomsContainer
   },
 });
 
