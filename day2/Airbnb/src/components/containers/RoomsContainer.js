@@ -24,6 +24,12 @@ class RoomsContainer extends Component{
 
  _idKeyExtractor = (item, index) => item._id;
 
+  renderRoom(room){
+    return(
+      <Room name={room.title} image={room.photos[0]} userImage={room.user.account.photos[0]} reviews={room.reviews} rating={room.ratingValue} price={room.price} />
+    );
+  }
+
   render(){
 
     if(this.state.isLoading){
@@ -40,7 +46,7 @@ class RoomsContainer extends Component{
           style={styles.rooms}
           keyExtractor = {this._idKeyExtractor}
           data={this.state.rooms}
-          renderItem={({item}) => <Room name={item.title} image={item.photos[0]} userImage={item.user.account.photos[0]} reviews={item.reviews} rating={item.ratingValue} price={item.price} />}
+          renderItem={({item}) => this.renderRoom(item)}
         />
       </View>
     );
